@@ -1,9 +1,10 @@
 package yak
 
 import (
+	"testing"
+
 	"github.com/yaklang/yaklang/common/yak/yaklang"
 	yaklangspec "github.com/yaklang/yaklang/common/yak/yaklang/spec"
-	"testing"
 )
 
 func TestCounter(t *testing.T) {
@@ -27,4 +28,9 @@ func TestCounter(t *testing.T) {
 		}
 	}
 	println(count)
+}
+
+func TestABC(t *testing.T) {
+	code := "a = 1; print(a);"
+	AnalyzeStaticYaklang(code)
 }

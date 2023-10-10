@@ -34,6 +34,7 @@ func TestTypePrediction_STR(t *testing.T) {
 	`)
 	prog.Show()
 	result := prog.InspectVariable("a")
+	prog.Show()
 	if !utils.StringArrayContains(result.ProbablyTypes, "string") {
 		t.Error("ProbablyTypes should contain string")
 	}
